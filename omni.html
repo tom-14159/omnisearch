@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<title>OmniSearch</title>
+		<meta charset="UTF-8">
+		<script src="jquery.min.js"></script>
+		<script src="omnitype.js"></script>
+		<script src="omni.js"></script>
+	</head>
+	<body>
+		<h1>OmniSearch</h1>
+		<input id="search" style="width:95%">
+		<div id="explain">
+		</div>
+	</body>
+
+	<script>
+		$("#search").on("keyup", function(){
+			try {
+				peg$parse(this.value);
+				$("#explain").html(order.explain()+"");
+			} catch {};
+		});
+	</script>
+</html>
+
