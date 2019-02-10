@@ -15,11 +15,11 @@ query
 stav
   = ("koncept"i "y"i / "nov"i [aáeé]i) { return "koncept"; }
   / ("odesila"i / "odesílá"i) (wspace "se"i)? { return "odesílá se"; }
-  / ("odeslan" [aáeé]i / "v heliosu"i) { return "odeslaná"; }
-  / ("castecne naskladnen"i / "částečně naskladněn"i / "castecn"i / "částečn"i) [aáeé]i {
+  / ("odeslan" [oaáeé]i / "odesláno" / "v heliosu"i) { return "odeslaná"; }
+  / ("castecne naskladnen"i / "částečně naskladněn"i / "castecn"i / "částečn"i) [aáeéo]i {
       return "částečně naskladněná";
     }
-  / ("naskladnen"i / "naskladněn"i / "uzavren"i / "uzavřen"i / "dorucen"i / "doručen"i) [aáeé]i {
+  / ("naskladnen"i / "naskladněn"i / "uzavren"i / "uzavřen"i / "dorucen"i / "doručen"i) [aáeéo]i {
       return "uzavřená";
     }
 
