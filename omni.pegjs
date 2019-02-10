@@ -97,10 +97,10 @@ datum_interval
 
 datum
   = ("dnes"i / "dneska"i / "dneška"i) { return new Omni.Date() }
-  / dd:([0-9][0-9]?) "." wspace* mm:([0-9][0-9]?) "." yyyy:[0-9]+ {
+  / dd:([0-9][0-9]?) "." wspace? mm:([0-9][0-9]?) wspace? "." yyyy:[0-9]+ {
       return new Omni.Date(parseInt(dd.join("")), parseInt(mm.join("")), parseInt(yyyy.join("")));
     }
-  / dd:([0-9][0-9]?) "." wspace* mm:([0-9][0-9]?) "." {
+  / dd:([0-9][0-9]?) "." wspace? mm:([0-9][0-9]?) "." {
       return new Omni.Date(parseInt(dd.join("")), parseInt(mm.join("")));
     }
 
